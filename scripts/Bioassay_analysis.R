@@ -139,7 +139,7 @@ df_aggregated <- df_aggregated %>%
                                                       "Deltamethrin 0.25%", "Permethrin 3.75%", "Permethrin 7.5%")))
 
 
-#======================================Figure 1: Bar plot=======================================
+#======================================Figure 7: Bar plot=======================================
 
 fig1_bar <- ggplot(df_aggregated, aes(x = admin1, y = mortality_rate, fill = resistance_level)) +
   geom_bar(stat = "identity", position = "stack", width = 0.8) +
@@ -246,7 +246,7 @@ supp_plot1_a <- ggplot(df_aggregated, aes(x = INSECTICIDE, y = admin1, fill = mo
 ggsave("./figures/Supp_Fig1_heatmap_insecticide_resistance.png", plot = supp_plot1_a,
        width = 8, height = 6, dpi = 300, units = "in")
 
-#=================================Supplementary Figure 1: heatmap (option 2)=====================================
+#=================================Supplementary Figure 9: heatmap (option 2)=====================================
 
 # Combine region and classification for row labels
 df_aggregated3 <- df_aggregated %>%
