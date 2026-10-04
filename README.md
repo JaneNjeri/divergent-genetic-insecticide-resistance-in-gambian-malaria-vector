@@ -1,4 +1,4 @@
-# Divergent genetic insecticide resistance in Gambian malaria vector: novel COE under selection in coastal *Anopheles arabiensis*
+# Integrated population genomics and phenotypic analyses reveal geographic structure and novel selection signals underlying insecticide resistance in *Anopheles arabiensis* from The Gambia, West Africa
 
 Welcome to the GitHub repository accompanying our manuscript:
 
