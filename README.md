@@ -2,7 +2,7 @@
 
 Welcome to the GitHub repository accompanying our manuscript:
 
-> **Title:** Divergent genetic insecticide resistance in Gambian malaria vector: novel COE under selection in coastal *Anopheles arabiensis*
+> **Title:** Integrated population genomics and phenotypic analyses reveal geographic structure and novel selection signals underlying insecticide resistance in *Anopheles arabiensis* from The Gambia, West Africa
 
 
 > **Authors:** ​​Fatoumata Seck, Jane N Mwangi, Chris S Clarkson, Saihou Cham, Saadbouh Faal, Musa Jawara, Ebrima Jatta, Kelly L. Bennett, Umberto D’Alessandro, Alfred A Ngwa, Alistair Miles, Kevin Opondo and Benoit S Assogba
