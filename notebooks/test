@@ -1,0 +1,1074 @@
+
+Ok_population_structure_and_Fst.ipynb_
+Geographical population structure and Pairwise Average Fst between coastal and inland cohorts
+ 
+[1]
+44 s
+#!pip install -q malariagen_data
+!pip install malariagen_data
+ Collecting malariagen_data
+  Downloading malariagen_data-15.10.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting anjl>=1.2.0 (from malariagen_data)
+  Downloading anjl-1.5.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting bed-reader>=1.1.0 (from malariagen_data)
+  Downloading bed_reader-1.1.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)
+Collecting biopython (from malariagen_data)
+  Downloading biopython-1.88-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Requirement already satisfied: bokeh>=3.7.0 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (3.8.2)
+Collecting dash<3.0.0 (from malariagen_data)
+  Downloading dash-2.18.2-py3-none-any.whl.metadata (10 kB)
+Collecting dash-cytoscape>=1.0.0 (from malariagen_data)
+  Downloading dash_cytoscape-1.0.2.tar.gz (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 21.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: dask[array] in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2026.8.0)
+Requirement already satisfied: distributed in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2026.8.0)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2025.12.0)
+Requirement already satisfied: gcsfs in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2025.12.0)
+Requirement already satisfied: google-auth in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2.49.0)
+Collecting igv-notebook>=0.2.3 (from malariagen_data)
+  Downloading igv_notebook-0.6.2-py3-none-any.whl.metadata (11 kB)
+Collecting ipinfo!=4.4.1 (from malariagen_data)
+  Downloading ipinfo-5.6.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: ipyleaflet>=0.17.0 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (0.20.0)
+Requirement already satisfied: ipywidgets in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (7.7.1)
+Requirement already satisfied: llvmlite in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (0.44.0)
+Requirement already satisfied: numba>=0.60.0 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (0.61.2)
+Collecting numcodecs<0.16,>=0.13 (from malariagen_data)
+  Downloading numcodecs-0.15.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.9 kB)
+Requirement already satisfied: numpy<2.2,>=2.0.2 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2.1.3)
+Collecting numpydoc-decorator>=2.1.0 (from malariagen_data)
+  Downloading numpydoc_decorator-2.3.0-py3-none-any.whl.metadata (9.8 kB)
+Requirement already satisfied: orjson in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (3.12.0)
+Requirement already satisfied: pandas==2.2.3 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2.2.3)
+Requirement already satisfied: plotly in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (5.24.1)
+Collecting protopunica>=0.14.8.post2 (from malariagen_data)
+  Downloading protopunica-0.14.8.post2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (642 bytes)
+Requirement already satisfied: pydantic>=2.0.0 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2.13.5)
+Collecting s3fs (from malariagen_data)
+  Downloading s3fs-2026.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting scikit-allel>=1.3.13 (from malariagen_data)
+  Downloading scikit_allel-1.3.13-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+Requirement already satisfied: scipy in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (1.16.3)
+Requirement already satisfied: statsmodels>=0.14.2 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (0.15.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (4.67.3)
+Requirement already satisfied: typeguard>=4.0.0 in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (4.6.0)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (4.16.0)
+Requirement already satisfied: xarray in /usr/local/lib/python3.13/dist-packages (from malariagen_data) (2025.12.0)
+Collecting yaspin (from malariagen_data)
+  Downloading yaspin-3.5.1-py3-none-any.whl.metadata (15 kB)
+Collecting zarr<3.0.0,>=2.18.3 (from malariagen_data)
+  Downloading zarr-2.18.7-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.13/dist-packages (from pandas==2.2.3->malariagen_data) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.13/dist-packages (from pandas==2.2.3->malariagen_data) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.13/dist-packages (from pandas==2.2.3->malariagen_data) (2026.4)
+Requirement already satisfied: packaging in /usr/local/lib/python3.13/dist-packages (from anjl>=1.2.0->malariagen_data) (26.3)
+Requirement already satisfied: Jinja2>=2.9 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (3.1.6)
+Requirement already satisfied: contourpy>=1.2 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (1.4.0)
+Requirement already satisfied: narwhals>=1.13 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (2.26.0)
+Requirement already satisfied: pillow>=7.1.0 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (11.3.0)
+Requirement already satisfied: PyYAML>=3.10 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (6.0.3)
+Requirement already satisfied: tornado>=6.2 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (6.5.7)
+Requirement already satisfied: xyzservices>=2021.09.1 in /usr/local/lib/python3.13/dist-packages (from bokeh>=3.7.0->malariagen_data) (2026.9.1)
+Collecting Flask<3.1,>=1.0.4 (from dash<3.0.0->malariagen_data)
+  Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting Werkzeug<3.1 (from dash<3.0.0->malariagen_data)
+  Downloading werkzeug-3.0.6-py3-none-any.whl.metadata (3.7 kB)
+Collecting dash-html-components==2.0.0 (from dash<3.0.0->malariagen_data)
+  Downloading dash_html_components-2.0.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting dash-core-components==2.0.0 (from dash<3.0.0->malariagen_data)
+  Downloading dash_core_components-2.0.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting dash-table==5.0.0 (from dash<3.0.0->malariagen_data)
+  Downloading dash_table-5.0.0-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.13/dist-packages (from dash<3.0.0->malariagen_data) (9.0.1)
+Requirement already satisfied: requests in /usr/local/lib/python3.13/dist-packages (from dash<3.0.0->malariagen_data) (2.32.4)
+Collecting retrying (from dash<3.0.0->malariagen_data)
+  Downloading retrying-1.4.2-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.13/dist-packages (from dash<3.0.0->malariagen_data) (1.6.0)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.13/dist-packages (from dash<3.0.0->malariagen_data) (80.10.2)
+Requirement already satisfied: ipykernel in /usr/local/lib/python3.13/dist-packages (from igv-notebook>=0.2.3->malariagen_data) (6.17.1)
+Requirement already satisfied: ipython in /usr/local/lib/python3.13/dist-packages (from igv-notebook>=0.2.3->malariagen_data) (7.34.0)
+Requirement already satisfied: aiohttp<4,>=3 in /usr/local/lib/python3.13/dist-packages (from ipinfo!=4.4.1->malariagen_data) (3.14.3)
+Requirement already satisfied: cachetools<8,>=4.2 in /usr/local/lib/python3.13/dist-packages (from ipinfo!=4.4.1->malariagen_data) (6.2.6)
+Requirement already satisfied: branca>=0.5.0 in /usr/local/lib/python3.13/dist-packages (from ipyleaflet>=0.17.0->malariagen_data) (0.8.2)
+Requirement already satisfied: jupyter-leaflet<0.21,>=0.20 in /usr/local/lib/python3.13/dist-packages (from ipyleaflet>=0.17.0->malariagen_data) (0.20.0)
+Requirement already satisfied: traittypes<3,>=0.2.1 in /usr/local/lib/python3.13/dist-packages (from ipyleaflet>=0.17.0->malariagen_data) (0.2.3)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.13/dist-packages (from ipywidgets->malariagen_data) (0.2.0)
+Requirement already satisfied: traitlets>=4.3.1 in /usr/local/lib/python3.13/dist-packages (from ipywidgets->malariagen_data) (5.7.1)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.13/dist-packages (from ipywidgets->malariagen_data) (3.6.10)
+Requirement already satisfied: jupyterlab-widgets>=1.0.0 in /usr/local/lib/python3.13/dist-packages (from ipywidgets->malariagen_data) (3.0.17)
+Collecting deprecated (from numcodecs<0.16,>=0.13->malariagen_data)
+  Downloading deprecated-3.0.0-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: tenacity>=6.2.0 in /usr/local/lib/python3.13/dist-packages (from plotly->malariagen_data) (9.1.4)
+Requirement already satisfied: joblib>=0.9.0b4 in /usr/local/lib/python3.13/dist-packages (from protopunica>=0.14.8.post2->malariagen_data) (1.6.0)
+Requirement already satisfied: networkx>=2.4 in /usr/local/lib/python3.13/dist-packages (from protopunica>=0.14.8.post2->malariagen_data) (3.7)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.13/dist-packages (from pydantic>=2.0.0->malariagen_data) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in /usr/local/lib/python3.13/dist-packages (from pydantic>=2.0.0->malariagen_data) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /usr/local/lib/python3.13/dist-packages (from pydantic>=2.0.0->malariagen_data) (0.4.4)
+Requirement already satisfied: patsy>=0.5.6 in /usr/local/lib/python3.13/dist-packages (from statsmodels>=0.14.2->malariagen_data) (1.0.3)
+Requirement already satisfied: formulaic>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from statsmodels>=0.14.2->malariagen_data) (1.2.2)
+Collecting asciitree (from zarr<3.0.0,>=2.18.3->malariagen_data)
+  Downloading asciitree-0.3.3.tar.gz (4.0 kB)
+  Preparing metadata (setup.py) ... done
+Collecting fasteners (from zarr<3.0.0,>=2.18.3->malariagen_data)
+  Downloading fasteners-0.20-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: click>=8.1 in /usr/local/lib/python3.13/dist-packages (from dask[array]->malariagen_data) (8.5.0)
+Requirement already satisfied: cloudpickle>=3.0.0 in /usr/local/lib/python3.13/dist-packages (from dask[array]->malariagen_data) (3.1.2)
+Requirement already satisfied: partd>=1.4.0 in /usr/local/lib/python3.13/dist-packages (from dask[array]->malariagen_data) (1.4.2)
+Requirement already satisfied: toolz>=0.12.0 in /usr/local/lib/python3.13/dist-packages (from dask[array]->malariagen_data) (0.12.1)
+Requirement already satisfied: locket>=1.0.0 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (1.0.0)
+Requirement already satisfied: msgpack>=1.0.2 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (1.2.3)
+Requirement already satisfied: psutil>=5.8.0 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (5.9.5)
+Requirement already satisfied: sortedcontainers>=2.0.5 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (2.4.0)
+Requirement already satisfied: tblib!=3.2.0,!=3.2.1,>=1.6.0 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (3.2.2)
+Requirement already satisfied: zict>=3.0.0 in /usr/local/lib/python3.13/dist-packages (from distributed->malariagen_data) (3.0.0)
+Requirement already satisfied: decorator>4.1.2 in /usr/local/lib/python3.13/dist-packages (from gcsfs->malariagen_data) (4.4.2)
+Requirement already satisfied: google-auth-oauthlib in /usr/local/lib/python3.13/dist-packages (from gcsfs->malariagen_data) (1.5.0)
+Requirement already satisfied: google-cloud-storage in /usr/local/lib/python3.13/dist-packages (from gcsfs->malariagen_data) (3.15.1)
+Requirement already satisfied: google-cloud-storage-control in /usr/local/lib/python3.13/dist-packages (from gcsfs->malariagen_data) (1.15.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/local/lib/python3.13/dist-packages (from google-auth->malariagen_data) (0.4.2)
+Requirement already satisfied: cryptography>=38.0.3 in /usr/local/lib/python3.13/dist-packages (from google-auth->malariagen_data) (50.0.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /usr/local/lib/python3.13/dist-packages (from google-auth->malariagen_data) (4.9.1)
+Collecting aiobotocore<4.0.0,>=2.19.0 (from s3fs->malariagen_data)
+  Downloading aiobotocore-3.9.2-py3-none-any.whl.metadata (32 kB)
+INFO: pip is looking at multiple versions of s3fs to determine which version is compatible with other requirements. This could take a while.
+Collecting s3fs (from malariagen_data)
+  Downloading s3fs-2026.7.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.6.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.4.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.3.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.2.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.1.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2025.12.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting aiobotocore<3.0.0,>=2.5.4 (from s3fs->malariagen_data)
+  Downloading aiobotocore-2.26.0-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: termcolor<4.0,>=3.3 in /usr/local/lib/python3.13/dist-packages (from yaspin->malariagen_data) (3.3.0)
+Collecting aioitertools<1.0.0,>=0.5.1 (from aiobotocore<3.0.0,>=2.5.4->s3fs->malariagen_data)
+  Downloading aioitertools-0.13.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting botocore<1.41.6,>=1.41.0 (from aiobotocore<3.0.0,>=2.5.4->s3fs->malariagen_data)
+  Downloading botocore-1.41.5-py3-none-any.whl.metadata (5.9 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from aiobotocore<3.0.0,>=2.5.4->s3fs->malariagen_data)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: multidict<7.0.0,>=6.0.0 in /usr/local/lib/python3.13/dist-packages (from aiobotocore<3.0.0,>=2.5.4->s3fs->malariagen_data) (6.9.1)
+Collecting wrapt<2.0.0,>=1.10.10 (from aiobotocore<3.0.0,>=2.5.4->s3fs->malariagen_data)
+  Downloading wrapt-1.17.3-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (1.8.0)
+Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp<4,>=3->ipinfo!=4.4.1->malariagen_data) (1.25.1)
+Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.13/dist-packages (from cryptography>=38.0.3->google-auth->malariagen_data) (2.1.1)
+Requirement already satisfied: itsdangerous>=2.1.2 in /usr/local/lib/python3.13/dist-packages (from Flask<3.1,>=1.0.4->dash<3.0.0->malariagen_data) (2.2.0)
+Requirement already satisfied: blinker>=1.6.2 in /usr/local/lib/python3.13/dist-packages (from Flask<3.1,>=1.0.4->dash<3.0.0->malariagen_data) (1.9.0)
+Requirement already satisfied: interface-meta>=1.2.0 in /usr/local/lib/python3.13/dist-packages (from formulaic>=1.1.0->statsmodels>=0.14.2->malariagen_data) (2.0.1)
+  Downloading wrapt-1.17.4rc1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: debugpy>=1.0 in /usr/local/lib/python3.13/dist-packages (from ipykernel->igv-notebook>=0.2.3->malariagen_data) (1.8.15)
+Requirement already satisfied: jupyter-client>=6.1.12 in /usr/local/lib/python3.13/dist-packages (from ipykernel->igv-notebook>=0.2.3->malariagen_data) (7.4.9)
+Requirement already satisfied: matplotlib-inline>=0.1 in /usr/local/lib/python3.13/dist-packages (from ipykernel->igv-notebook>=0.2.3->malariagen_data) (0.2.2)
+Requirement already satisfied: pyzmq>=17 in /usr/local/lib/python3.13/dist-packages (from ipykernel->igv-notebook>=0.2.3->malariagen_data) (26.2.1)
+Collecting jedi>=0.16 (from ipython->igv-notebook>=0.2.3->malariagen_data)
+  Downloading jedi-0.20.0-py2.py3-none-any.whl.metadata (23 kB)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.13/dist-packages (from ipython->igv-notebook>=0.2.3->malariagen_data) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /usr/local/lib/python3.13/dist-packages (from ipython->igv-notebook>=0.2.3->malariagen_data) (3.0.53)
+Requirement already satisfied: pygments in /usr/local/lib/python3.13/dist-packages (from ipython->igv-notebook>=0.2.3->malariagen_data) (2.21.0)
+Requirement already satisfied: backcall in /usr/local/lib/python3.13/dist-packages (from ipython->igv-notebook>=0.2.3->malariagen_data) (0.2.0)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.13/dist-packages (from ipython->igv-notebook>=0.2.3->malariagen_data) (4.9.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/dist-packages (from Jinja2>=2.9->bokeh>=3.7.0->malariagen_data) (3.0.3)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in /usr/local/lib/python3.13/dist-packages (from pyasn1-modules>=0.2.1->google-auth->malariagen_data) (0.6.4)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil>=2.8.2->pandas==2.2.3->malariagen_data) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.13/dist-packages (from requests->dash<3.0.0->malariagen_data) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.13/dist-packages (from requests->dash<3.0.0->malariagen_data) (3.20)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.13/dist-packages (from requests->dash<3.0.0->malariagen_data) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.13/dist-packages (from requests->dash<3.0.0->malariagen_data) (2026.7.22)
+Requirement already satisfied: notebook>=4.4.1 in /usr/local/lib/python3.13/dist-packages (from widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (6.5.7)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /usr/local/lib/python3.13/dist-packages (from google-auth-oauthlib->gcsfs->malariagen_data) (2.0.0)
+Requirement already satisfied: google-api-core<3.0.0,>=2.27.0 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage->gcsfs->malariagen_data) (2.30.3)
+Requirement already satisfied: google-cloud-core<3.0.0,>=2.4.2 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage->gcsfs->malariagen_data) (2.8.0)
+Requirement already satisfied: google-resumable-media<3.0.0,>=2.7.2 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage->gcsfs->malariagen_data) (2.11.0)
+Requirement already satisfied: google-crc32c<2.0.0,>=1.6.0 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage->gcsfs->malariagen_data) (1.9.0)
+Requirement already satisfied: grpcio<2.0.0,>=1.59.0 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage-control->gcsfs->malariagen_data) (1.84.0)
+Requirement already satisfied: proto-plus<2.0.0,>=1.26.1 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage-control->gcsfs->malariagen_data) (1.29.0)
+Requirement already satisfied: protobuf<8.0.0,>=6.33.5 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage-control->gcsfs->malariagen_data) (6.33.6)
+Requirement already satisfied: grpc-google-iam-v1<1.0.0,>=0.14.2 in /usr/local/lib/python3.13/dist-packages (from google-cloud-storage-control->gcsfs->malariagen_data) (0.14.5)
+Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.13/dist-packages (from importlib-metadata->dash<3.0.0->malariagen_data) (4.1.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.13/dist-packages (from cffi>=2.0.0->cryptography>=38.0.3->google-auth->malariagen_data) (3.0)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.63.2 in /usr/local/lib/python3.13/dist-packages (from google-api-core<3.0.0,>=2.27.0->google-cloud-storage->gcsfs->malariagen_data) (1.75.5)
+Requirement already satisfied: grpcio-status<2.0.0,>=1.33.2 in /usr/local/lib/python3.13/dist-packages (from google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-storage-control->gcsfs->malariagen_data) (1.84.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.6 in /usr/local/lib/python3.13/dist-packages (from jedi>=0.16->ipython->igv-notebook>=0.2.3->malariagen_data) (0.8.7)
+Requirement already satisfied: entrypoints in /usr/local/lib/python3.13/dist-packages (from jupyter-client>=6.1.12->ipykernel->igv-notebook>=0.2.3->malariagen_data) (0.4)
+Requirement already satisfied: jupyter-core>=4.9.2 in /usr/local/lib/python3.13/dist-packages (from jupyter-client>=6.1.12->ipykernel->igv-notebook>=0.2.3->malariagen_data) (5.9.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (25.1.0)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (5.11.1)
+Requirement already satisfied: nbconvert>=5 in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (7.17.1)
+Requirement already satisfied: Send2Trash>=1.8.0 in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2.1.0)
+Requirement already satisfied: terminado>=0.8.3 in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.18.1)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.26.0)
+Requirement already satisfied: nbclassic>=0.4.7 in /usr/local/lib/python3.13/dist-packages (from notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.3.3)
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.13/dist-packages (from pexpect>4.3->ipython->igv-notebook>=0.2.3->malariagen_data) (0.7.0)
+Requirement already satisfied: wcwidth>=0.1.4 in /usr/local/lib/python3.13/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->ipython->igv-notebook>=0.2.3->malariagen_data) (0.9.1)
+Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.13/dist-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib->gcsfs->malariagen_data) (3.3.1)
+Requirement already satisfied: platformdirs>=2.5 in /usr/local/lib/python3.13/dist-packages (from jupyter-core>=4.9.2->jupyter-client>=6.1.12->ipykernel->igv-notebook>=0.2.3->malariagen_data) (4.12.2)
+Requirement already satisfied: notebook-shim>=0.2.3 in /usr/local/lib/python3.13/dist-packages (from nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.2.4)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (4.13.5)
+Requirement already satisfied: bleach!=5.0.0 in /usr/local/lib/python3.13/dist-packages (from bleach[css]!=5.0.0->nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (6.4.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.3.0)
+Requirement already satisfied: mistune<4,>=2.0.3 in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (3.3.4)
+Requirement already satisfied: nbclient>=0.5.0 in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.10.4)
+Requirement already satisfied: pandocfilters>=1.4.1 in /usr/local/lib/python3.13/dist-packages (from nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.5.1)
+Requirement already satisfied: fastjsonschema>=2.15 in /usr/local/lib/python3.13/dist-packages (from nbformat->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2.22.2)
+Requirement already satisfied: jsonschema>=2.6 in /usr/local/lib/python3.13/dist-packages (from nbformat->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (4.26.0)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.13/dist-packages (from argon2-cffi->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (26.1.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.13/dist-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.6.1)
+Requirement already satisfied: tinycss2>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from bleach[css]!=5.0.0->nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.5.1)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.13/dist-packages (from jsonschema>=2.6->nbformat->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.13/dist-packages (from jsonschema>=2.6->nbformat->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in /usr/local/lib/python3.13/dist-packages (from jsonschema>=2.6->nbformat->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2026.6.3)
+Requirement already satisfied: jupyter-server<3,>=1.8 in /usr/local/lib/python3.13/dist-packages (from notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2.20.0)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.13/dist-packages (from beautifulsoup4->nbconvert>=5->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (2.10)
+Requirement already satisfied: anyio>=3.1.0 in /usr/local/lib/python3.13/dist-packages (from jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (4.15.1)
+Requirement already satisfied: jupyter-events>=0.11.0 in /usr/local/lib/python3.13/dist-packages (from jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.12.1)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in /usr/local/lib/python3.13/dist-packages (from jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.5.4)
+Requirement already satisfied: websocket-client>=1.7 in /usr/local/lib/python3.13/dist-packages (from jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.9.2)
+Requirement already satisfied: python-json-logger>=2.0.4 in /usr/local/lib/python3.13/dist-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (4.2.0)
+Requirement already satisfied: rfc3339-validator in /usr/local/lib/python3.13/dist-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in /usr/local/lib/python3.13/dist-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (0.1.1)
+Requirement already satisfied: fqdn in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.6.0)
+Requirement already satisfied: isoduration in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (3.1.1)
+Requirement already satisfied: rfc3987-syntax>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.1.0)
+Requirement already satisfied: uri-template in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.3.0)
+Requirement already satisfied: webcolors>=24.6.0 in /usr/local/lib/python3.13/dist-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (25.10.0)
+Requirement already satisfied: lark>=1.2.2 in /usr/local/lib/python3.13/dist-packages (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.3.1)
+Requirement already satisfied: arrow>=0.15.0 in /usr/local/lib/python3.13/dist-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=1.8->notebook-shim>=0.2.3->nbclassic>=0.4.7->notebook>=4.4.1->widgetsnbextension~=3.6.0->ipywidgets->malariagen_data) (1.4.0)
+Downloading malariagen_data-15.10.0-py3-none-any.whl (263 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 263.7/263.7 kB 19.8 MB/s eta 0:00:00
+Downloading anjl-1.5.0-py3-none-any.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.7/71.7 kB 5.5 MB/s eta 0:00:00
+Downloading bed_reader-1.1.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 57.2 MB/s eta 0:00:00
+Downloading dash-2.18.2-py3-none-any.whl (7.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 56.9 MB/s eta 0:00:00
+Downloading dash_core_components-2.0.0-py3-none-any.whl (3.8 kB)
+Downloading dash_html_components-2.0.0-py3-none-any.whl (4.1 kB)
+Downloading dash_table-5.0.0-py3-none-any.whl (3.9 kB)
+Downloading igv_notebook-0.6.2-py3-none-any.whl (775 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.9/775.9 kB 39.6 MB/s eta 0:00:00
+Downloading ipinfo-5.6.0-py3-none-any.whl (47 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.8/47.8 kB 3.7 MB/s eta 0:00:00
+Downloading numcodecs-0.15.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 70.4 MB/s eta 0:00:00
+Downloading numpydoc_decorator-2.3.0-py3-none-any.whl (11 kB)
+Downloading protopunica-0.14.8.post2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.7/25.7 MB 24.9 MB/s eta 0:00:00
+Downloading scikit_allel-1.3.13-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 54.2 MB/s eta 0:00:00
+Downloading zarr-2.18.7-py3-none-any.whl (211 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.3/211.3 kB 17.8 MB/s eta 0:00:00
+Downloading biopython-1.88-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 63.0 MB/s eta 0:00:00
+Downloading s3fs-2025.12.0-py3-none-any.whl (30 kB)
+Downloading yaspin-3.5.1-py3-none-any.whl (22 kB)
+Downloading aiobotocore-2.26.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.2 MB/s eta 0:00:00
+Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 9.3 MB/s eta 0:00:00
+Downloading werkzeug-3.0.6-py3-none-any.whl (227 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.0/228.0 kB 19.2 MB/s eta 0:00:00
+Downloading deprecated-3.0.0-py3-none-any.whl (21 kB)
+Downloading fasteners-0.20-py3-none-any.whl (18 kB)
+Downloading retrying-1.4.2-py3-none-any.whl (10 kB)
+Downloading aioitertools-0.13.0-py3-none-any.whl (24 kB)
+Downloading botocore-1.41.5-py3-none-any.whl (14.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 87.2 MB/s eta 0:00:00
+Downloading jedi-0.20.0-py2.py3-none-any.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 105.4 MB/s eta 0:00:00
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading wrapt-1.17.4rc1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (88 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.2/88.2 kB 6.7 MB/s eta 0:00:00
+Building wheels for collected packages: dash-cytoscape, asciitree
+  Building wheel for dash-cytoscape (setup.py) ... done
+  Created wheel for dash-cytoscape: filename=dash_cytoscape-1.0.2-py3-none-any.whl size=4010811 sha256=9f9a79c1514410eb27b7cbb0fa6511299a2e22270749b209f92185de4f46a2c8
+  Stored in directory: /root/.cache/pip/wheels/1d/3a/14/e8bdf175039d5a4597973c9c04e7ba2d4d77420c62a1fc7c0d
+  Building wheel for asciitree (setup.py) ... done
+  Created wheel for asciitree: filename=asciitree-0.3.3-py3-none-any.whl size=5098 sha256=6325174cdbce76ac05a25863c4a344fb514682efb1d1bedd692ac536db83c466
+  Stored in directory: /root/.cache/pip/wheels/0e/70/f0/bff6301cfa0d49afa79c020bc98c114a9b9c6b3048e62e3200
+Successfully built dash-cytoscape asciitree
+Installing collected packages: dash-table, dash-html-components, dash-core-components, asciitree, yaspin, wrapt, Werkzeug, retrying, numpydoc-decorator, jmespath, jedi, fasteners, biopython, bed-reader, aioitertools, protopunica, Flask, deprecated, botocore, numcodecs, ipinfo, dash, anjl, aiobotocore, zarr, scikit-allel, s3fs, igv-notebook, dash-cytoscape, malariagen_data
+  Attempting uninstall: wrapt
+    Found existing installation: wrapt 2.5.0
+    Uninstalling wrapt-2.5.0:
+      Successfully uninstalled wrapt-2.5.0
+  Attempting uninstall: Werkzeug
+    Found existing installation: Werkzeug 3.1.9
+    Uninstalling Werkzeug-3.1.9:
+      Successfully uninstalled Werkzeug-3.1.9
+  Attempting uninstall: Flask
+    Found existing installation: Flask 3.1.3
+    Uninstalling Flask-3.1.3:
+      Successfully uninstalled Flask-3.1.3
+Successfully installed Flask-3.0.3 Werkzeug-3.0.6 aiobotocore-2.26.0 aioitertools-0.13.0 anjl-1.5.0 asciitree-0.3.3 bed-reader-1.1.0 biopython-1.88 botocore-1.41.5 dash-2.18.2 dash-core-components-2.0.0 dash-cytoscape-1.0.2 dash-html-components-2.0.0 dash-table-5.0.0 deprecated-3.0.0 fasteners-0.20 igv-notebook-0.6.2 ipinfo-5.6.0 jedi-0.20.0 jmespath-1.1.0 malariagen_data-15.10.0 numcodecs-0.15.1 numpydoc-decorator-2.3.0 protopunica-0.14.8.post2 retrying-1.4.2 s3fs-2025.12.0 scikit-allel-1.3.13 wrapt-1.17.4rc1 yaspin-3.5.1 zarr-2.18.7
+ 
+[2]
+13 s
+!pip install scikit-learn
+ Requirement already satisfied: scikit-learn in /usr/local/lib/python3.13/dist-packages (1.6.1)
+Requirement already satisfied: numpy>=1.19.5 in /usr/local/lib/python3.13/dist-packages (from scikit-learn) (2.1.3)
+Requirement already satisfied: scipy>=1.6.0 in /usr/local/lib/python3.13/dist-packages (from scikit-learn) (1.16.3)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.13/dist-packages (from scikit-learn) (1.6.0)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.13/dist-packages (from scikit-learn) (3.7.0)
+Requirement already satisfied: cloudpickle>=3.0 in /usr/local/lib/python3.13/dist-packages (from joblib>=1.2.0->scikit-learn) (3.1.2)
+ 
+[3]
+6 s
+import os
+import re
+import plotly
+import plotly.express as px
+import pandas as pd
+import plotly.graph_objects as go
+from sklearn.cluster import KMeans
+import numpy as np
+ 
+[ ]
+#from google.colab import drive
+#drive.mount("drive")
+ 
+[ ]
+#results_dir = 'drive/MyDrive/Colab Data/gm-analysis/pca-results'
+#os.makedirs(results_dir, exist_ok=True)
+ 
+[4]
+16 s
+import malariagen_data
+ 
+[5]
+13 s
+#ag3 = malariagen_data.Ag3(results_cache=results_dir)
+#ag3
+ag3 = malariagen_data.Ag3(pre=True)
+ag3
+ 
+ 
+[6]
+12 s
+df_samples=ag3.sample_metadata(sample_query="country=='Gambia, The' and taxon == 'arabiensis' and unrestricted_use == True")
+ 
+[7]
+0 s
+arab_2019_sample_query = (
+    "country=='Gambia, The' and "
+    "taxon=='arabiensis' and "
+    "sample_set=='1272-VO-GM-OPONDO-VMF00160' and "
+    "sample_id!='VBS47740-6366STDY9854349'"
+)
+ 
+[ ]
+# access metadata
+df_arab_2019_sample = ag3.sample_metadata(sample_query=arab_2019_sample_query)
+df_arab_2019_sample
+ 
+ 
+[ ]
+df_arab_2019_sample['cohort_admin1_year'].unique()
+ array(['GM-L_arab_2019', 'GM-M_arab_2019', 'GM-U_arab_2019',
+       'GM-W_arab_2019', 'GM-N_arab_2019'], dtype=object)
+ 
+[ ]
+df_arab_2019_sample.groupby(['sample_set','admin1_name','cohort_admin1_year','cohort_admin2_year']).size()
+ 
+Geographical population structure
+
+ 
+[ ]
+# parameters to use in the PCA computations
+region = "3L"
+n_snps = 100_000
+arab_sample_query = (
+    "taxon == 'arabiensis' and "
+    "country == 'Gambia, The' and "
+    "sample_set == '1272-VO-GM-OPONDO-VMF00160' and "
+    "sample_id != 'VBS47740-6366STDY9854349'"
+)
+site_mask = "arab"
+ 
+[ ]
+#pca = PCA(n_components=20)
+ 
+[ ]
+pca_df_arab, evr_arab = ag3.pca(
+    region=region,
+    n_snps=n_snps,
+    sample_query=arab_sample_query,
+    site_mask=site_mask,
+    min_minor_ac=2,
+    max_missing_an=0
+    )
+ 
+Color by collection location
+ 
+[ ]
+ag3.plot_pca_variance(evr_arab)
+ 
+ 
+[ ]
+# remove outliers !!! "VBS47740-6366STDY9854349" is from #2001arab_outliers = [    "VBS47740-6366STDY9854349", ##2001 gambia arab    "VBS48175-6366STDY9854776",    "VBS47997-6366STDY9854595",    "VBS48073-6366STDY9854673",    "VBS48085-6366STDY9854685",    "VBS48029-6366STDY9854629",    "VBS47764-6366STDY9854373",    "VBS47995-6366STDY9854593",    "VBS48055-6366STDY9854655",    "VBS47767-6366STDY9854376",    "VBS48013-6366STDY9854611",    # "VBS48028-6366STDY9854628",    "VBS48131-6366STDY9854733",    "VBS47999-6366STDY9854597",    "VBS47900-6366STDY9854498",    "VBS47896-6366STDY9854495",    # "VBS48133-6366STDY9854735",    "VBS47775-6366STDY9854384",    "VBS48126-6366STDY9854728",    # "VBS48058-6366STDY9854658",]
+
+ 
+[ ]
+region = "3L"
+n_snps = 100_000
+
+pca_df_arab_wo_outliers, evr_arab_wo_outliers = ag3.pca(
+    region=region,
+    n_snps=n_snps,
+    sample_query=f"taxon == 'arabiensis' and country == 'Gambia, The' and sample_set == '1272-VO-GM-OPONDO-VMF00160' and sample_id not in {arab_outliers}",
+    site_mask="arab",
+    min_minor_ac=2,
+    max_missing_an=0
+    )
+ 
+Supplementary Figure 1. Proportion of genetic variance explained by the first 20 principal components
+
+ 
+[ ]
+ag3.plot_pca_variance(evr_arab_wo_outliers)
+ 
+ 
+[ ]
+print(evr_arab_wo_outliers[0] * 100)
+ 0.7486076
+Supplementary Figure 2A. Population structure
+
+Coloring by administrative division
+ 
+[ ]
+# Define color mapping for each admin2 unit
+color_mapping_admin2 = {
+    'Jarra East': '#8e8c84',
+    'Lower Fuladu West': '#7f7f7f',
+    'Upper Fuladu West': '#6b705c',
+    'Niani': '#4a4e4d',
+    'Niamina East': '#3b5c40',
+    'Jimara': '#8e7d32',
+    'Basse': '#a95b29',
+    'Wuli East': '#b64d3b',
+    'Tumana': '#8a4b39',
+    'Niamina West': '#6f4e37',
+    'Sandu': '#3e3a3a',
+    'Jeshwang': '#a4c9e2',
+    'Kombo Central': '#78aaff',
+    'Lower Niumi': '#4d88ff',
+    'Bakau': '#0077b6',
+    'Illiasa': '#0096c7',
+    'Foni Brefet': '#00b4d8'
+}
+ 
+[ ]
+# Apply color mapping to the PCA DataFrame
+pca_df_arab_wo_outliers['color_admin2'] = pca_df_arab_wo_outliers['admin2_name'].map(color_mapping_admin2)
+ 
+[ ]
+ag3.plot_pca_coords(
+    pca_df_arab_wo_outliers,
+    color='admin2_name',
+    color_discrete_map=color_mapping_admin2,
+    title = "The Gambia, Geographical population structure in An. arabiensis"
+)
+ 
+ 
+[ ]
+ag3.plot_pca_coords(
+    pca_df_arab_wo_outliers,
+    y="PC3",
+    x="PC1",
+    color='admin2_name',
+    color_discrete_map=color_mapping_admin2,
+    title = "The Gambia, Geographical population structure in An. arabiensis"
+)
+ 
+Coloring by latitude/longitude coordinates
+ 
+[ ]
+ag3.plot_pca_coords(
+    pca_df_arab_wo_outliers,
+    x="longitude",
+    y="PC1",
+    color='admin2_name',
+    labels={"admin2_name": "Location"},
+    color_discrete_map=color_mapping_admin2,
+    title = "The Gambia, Geographical population structure in An. arabiensis"
+)
+ 
+Flipping the Axis to match the geographies of The Gambia
+ 
+[ ]
+print(pca_df_arab_wo_outliers)
+                     sample_id        PC1        PC2        PC3        PC4  \
+0    VBS47723-6366STDY9854332 -15.574739 -10.290522   1.005367   8.018106   
+1    VBS47725-6366STDY9854334 -29.463022  16.666611 -13.845028   4.498345   
+2    VBS47726-6366STDY9854335 -32.548393  -7.278450  16.089140  10.171919   
+3    VBS47729-6366STDY9854338 -37.592819  34.577698  18.094067 -15.912996   
+4    VBS47731-6366STDY9854340 -37.217518   2.248578  21.159843 -18.428692   
+..                        ...        ...        ...        ...        ...   
+293  VBS48165-6366STDY9854766  40.991936  -9.585222  -2.014098  -2.967798   
+294  VBS48167-6366STDY9854768  35.904594 -25.340012   5.971238 -29.179829   
+295  VBS48171-6366STDY9854772  33.592567 -53.791477  26.402733 -27.791197   
+296  VBS48173-6366STDY9854774  44.005806   4.764619  -4.854803   0.253644   
+297  VBS48174-6366STDY9854775  62.089535 -34.370159 -11.440298 -25.376963   
+
+           PC5        PC6         PC7        PC8         PC9  ...       taxon  \
+0   -11.598413 -21.793081  -16.509594  -7.765936  -27.207624  ...  arabiensis   
+1   -16.832493 -58.236023   14.049687  -0.173093   21.921785  ...  arabiensis   
+2   -24.464752 -41.184978  -15.666381 -25.899429   29.763491  ...  arabiensis   
+3   -62.300213   5.928820 -106.679390  24.991848  112.799042  ...  arabiensis   
+4    28.413464 -50.762241   68.122734   7.247433   10.595751  ...  arabiensis   
+..         ...        ...         ...        ...         ...  ...         ...   
+293 -16.094767  -8.283036  -46.468639 -14.291867  -21.959932  ...  arabiensis   
+294  23.755108  28.783749   -2.299509  34.111641   -8.309137  ...  arabiensis   
+295  29.471373 -25.171864 -126.209869  -2.391452 -240.038437  ...  arabiensis   
+296   5.220829   6.110408  -27.644251  20.786594    1.621526  ...  arabiensis   
+297   4.314206  77.313141   22.136927  20.744387   13.082531  ...  arabiensis   
+
+     cohort_admin1_year  cohort_admin1_month  cohort_admin1_quarter  \
+0        GM-L_arab_2019    GM-L_arab_2019_09      GM-L_arab_2019_Q3   
+1        GM-M_arab_2019    GM-M_arab_2019_09      GM-M_arab_2019_Q3   
+2        GM-M_arab_2019    GM-M_arab_2019_09      GM-M_arab_2019_Q3   
+3        GM-M_arab_2019    GM-M_arab_2019_10      GM-M_arab_2019_Q4   
+4        GM-M_arab_2019    GM-M_arab_2019_09      GM-M_arab_2019_Q3   
+..                  ...                  ...                    ...   
+293      GM-W_arab_2019    GM-W_arab_2019_09      GM-W_arab_2019_Q3   
+294      GM-N_arab_2019    GM-N_arab_2019_10      GM-N_arab_2019_Q4   
+295      GM-W_arab_2019    GM-W_arab_2019_09      GM-W_arab_2019_Q3   
+296      GM-W_arab_2019    GM-W_arab_2019_09      GM-W_arab_2019_Q3   
+297      GM-W_arab_2019    GM-W_arab_2019_09      GM-W_arab_2019_Q3   
+
+                   cohort_admin2_year                  cohort_admin2_month  \
+0           GM-L_Jarra-East_arab_2019         GM-L_Jarra-East_arab_2019_09   
+1    GM-M_Lower-Fuladu-West_arab_2019  GM-M_Lower-Fuladu-West_arab_2019_09   
+2    GM-M_Upper-Fuladu-West_arab_2019  GM-M_Upper-Fuladu-West_arab_2019_09   
+3    GM-M_Lower-Fuladu-West_arab_2019  GM-M_Lower-Fuladu-West_arab_2019_10   
+4    GM-M_Upper-Fuladu-West_arab_2019  GM-M_Upper-Fuladu-West_arab_2019_09   
+..                                ...                                  ...   
+293              GM-W_Bakau_arab_2019              GM-W_Bakau_arab_2019_09   
+294        GM-N_Lower-Niumi_arab_2019        GM-N_Lower-Niumi_arab_2019_10   
+295      GM-W_Kombo-Central_arab_2019      GM-W_Kombo-Central_arab_2019_09   
+296           GM-W_Jeshwang_arab_2019           GM-W_Jeshwang_arab_2019_09   
+297           GM-W_Jeshwang_arab_2019           GM-W_Jeshwang_arab_2019_09   
+
+                   cohort_admin2_quarter  pca_fit  color_admin1  color_admin2  
+0           GM-L_Jarra-East_arab_2019_Q3     True       #ffd966       #8e8c84  
+1    GM-M_Lower-Fuladu-West_arab_2019_Q3     True       #f4a261       #7f7f7f  
+2    GM-M_Upper-Fuladu-West_arab_2019_Q3     True       #f4a261       #6b705c  
+3    GM-M_Lower-Fuladu-West_arab_2019_Q4     True       #f4a261       #7f7f7f  
+4    GM-M_Upper-Fuladu-West_arab_2019_Q3     True       #f4a261       #6b705c  
+..                                   ...      ...           ...           ...  
+293              GM-W_Bakau_arab_2019_Q3     True       #a6bddb       #0077b6  
+294        GM-N_Lower-Niumi_arab_2019_Q4     True       #2b8cbe       #4d88ff  
+295      GM-W_Kombo-Central_arab_2019_Q3     True       #d2c4e6       #78aaff  
+296           GM-W_Jeshwang_arab_2019_Q3     True       #a6bddb       #a4c9e2  
+297           GM-W_Jeshwang_arab_2019_Q3     True       #a6bddb       #a4c9e2  
+
+[298 rows x 81 columns]
+ 
+[ ]
+# flip PC1 to switch the clusters
+pca_df_arab_wo_outliers['PC1'] = -pca_df_arab_wo_outliers['PC1']
+ 
+[ ]
+pca_df_arab_wo_outliers[["PC1"]]
+ 
+ 
+[ ]
+pca_fig=ag3.plot_pca_coords(
+    pca_df_arab_wo_outliers,
+    y="PC2",
+    x="PC1",
+    color='admin2_name',
+    labels={"admin2_name": "Location"},
+    color_discrete_map=color_mapping_admin2,
+    title = "The Gambia, Geographical population structure in An. arabiensis",
+    show=False
+)
+ 
+[ ]
+pca_fig
+ 
+Figure 1b. Geographical population structure
+
+Cluster annotation - kmeans
+ 
+[ ]
+df_samples_gambia.median_cov.min()
+
+ np.int64(10)
+ 
+[ ]
+df_samples_gambia.median_cov.max()
+ np.int64(53)
+ 
+[ ]
+df_samples_gambia.median_cov.mean()
+ np.float64(29.847619047619048)
+ 
+[ ]
+kmeans = KMeans(n_clusters=2, init = 'k-means++', max_iter=200)
+ 
+[ ]
+df_columns = ['PC1', 'PC2']
+ 
+[ ]
+km = kmeans.fit(pca_df_arab_wo_outliers[df_columns])
+ 
+[ ]
+centroids = km.cluster_centers_
+ 
+[ ]
+# Find assignment by cluster
+data_pred = kmeans.fit_predict(pca_df_arab_wo_outliers[df_columns])
+pca_df_arab_wo_outliers['cluster'] = data_pred
+ 
+[ ]
+# Split data by group for generated bounds for ellipse
+data0 = pca_df_arab_wo_outliers[pca_df_arab_wo_outliers['cluster']==0]
+data1 = pca_df_arab_wo_outliers[pca_df_arab_wo_outliers['cluster']==1]
+ 
+[ ]
+# Calculate covariance matrix
+cov_matrix = np.cov(data0['PC1'], data0['PC2'])
+# Calculate eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+# Determine the angle from eigenvectors
+angle = np.arctan2(eigenvectors[1, 0], eigenvectors[0, 0])
+# Get center and scale of ellipse
+center = np.mean(np.array([data0['PC1'], data0['PC2']]), axis=1)
+# For a 95% confidence ellipse, the scaling factor for the radii is approx. sqrt(5.991)
+# This factor is derived from the chi-squared distribution with 2 degrees of freedom for 95% confidence [7]
+scaling_factor = np.sqrt(5.991)
+radii = scaling_factor * np.sqrt(eigenvalues)
+
+t = np.linspace(0, 2 * np.pi, 100)
+ellipse_x_auto = center[0] + radii[0] * np.cos(t) * np.cos(angle) - radii[1] * np.sin(t) * np.sin(angle)
+ellipse_y_auto = center[1] + radii[0] * np.cos(t) * np.sin(angle) + radii[1] * np.sin(t) * np.cos(angle)
+ 
+[ ]
+pca_fig.add_trace(go.Scatter(
+    x=ellipse_x_auto,
+    y=ellipse_y_auto,
+    mode='lines',
+    name='95% Confidence Ellipse',
+    line=dict(color='#a4c9e2', width=2)
+    #fill='toself' # Fills the area enclosed by the ellipse
+    ))
+
+
+pca_fig.show()
+ 
+ 
+[ ]
+# Calculate covariance matrix
+cov_matrix1 = np.cov(data1['PC1'], data1['PC2'])
+# Calculate eigenvalues and eigenvectors
+eigenvalues1, eigenvectors1 = np.linalg.eig(cov_matrix1)
+# Determine the angle from eigenvectors
+angle1 = np.arctan2(eigenvectors1[1, 0], eigenvectors1[0, 0])
+# Get center and scale of ellipse
+center1 = np.mean(np.array([data1['PC1'], data1['PC2']]), axis=1)
+# For a 95% confidence ellipse, the scaling factor for the radii is approx. sqrt(5.991)
+# This factor is derived from the chi-squared distribution with 2 degrees of freedom for 95% confidence [7]
+scaling_factor1 = np.sqrt(5.991)
+radii1 = scaling_factor1 * np.sqrt(eigenvalues1)
+
+t1 = np.linspace(0, 2 * np.pi, 100)
+ellipse_x_auto1 = center1[0] + radii1[0] * np.cos(t1) * np.cos(angle1) - radii1[1] * np.sin(t1) * np.sin(angle1)
+ellipse_y_auto1 = center1[1] + radii1[0] * np.cos(t1) * np.sin(angle1) + radii1[1] * np.sin(t1) * np.cos(angle1)
+ 
+[ ]
+pca_fig.add_trace(go.Scatter(
+    x=ellipse_x_auto1,
+    y=ellipse_y_auto1,
+    mode='lines',
+    name='95% Confidence Ellipse',
+    line=dict(color='#b64d3b', width=2),
+    #fill='toself' # Fills the area enclosed by the ellipse
+    ))
+
+
+pca_fig.show()
+ 
+ 
+[ ]
+pca_fig.add_trace(go.Scatter(
+    x=centroids[:,0],
+    y=centroids[:,1],
+    mode="text",
+    name="Centroids",
+    text=["IC", "CC"],
+    textposition="top center"
+    ))
+pca_fig.update_traces(textfont_size=20)
+ 
+ 
+[ ]
+admin_labels=df_samples.admin2_name.unique()
+ 
+[ ]
+for trace in pca_fig['data']:
+    if (not trace['name'] in admin_labels):
+        trace['showlegend'] = False
+ 
+[ ]
+pca_fig
+ 
+Supplementary Figure 2B. Neighbour joining tree
+
+ 
+[ ]
+ag3.plot_njt(    region="3L",    n_snps=50_000,    site_mask="arab",    sample_query=f"taxon == 'arabiensis' and country == 'Gambia, The' and sample_set == '1272-VO-GM-OPONDO-VMF00160' and sample_id not in {arab_outliers}",    color="admin2_name",    #labels={"admin2_name": "Location"},    color_discrete_map=color_mapping_admin2)
+
+ 
+Supplementary Figure 3. Population structure - The Gambia and reference populations WA
+
+ 
+[8]
+WA_sample_sets = ['AG1000G-BF-B','AG1000G-CM-C','1272-VO-GM-OPONDO-VMF00160','AG1000G-ML-B','1314-VO-BF-KIENTEGA-KIMA-BF-2104']
+ 
+[9]
+df_WA__samples=ag3.sample_metadata(sample_query=f"sample_set in {WA_sample_sets} and taxon == 'arabiensis' and sample_id!='VBS47740-6366STDY9854349'")
+ 
+[10]
+df_WA__samples.groupby('country').size()
+ 
+ 
+[11]
+0 s
+region = "3L:15,000,000-41,000,000"
+n_snps = 100_000
+ 
+[14]
+outlier_list=['VBS47997-6366STDY9854595',
+              'VBS47740-6366STDY9854349', #2001 gambia arab
+ 'VBS48073-6366STDY9854673',
+ 'VBS48085-6366STDY9854685',
+ 'VBS48175-6366STDY9854776',
+#round2
+ 'VBS47995-6366STDY9854593', 'VBS48029-6366STDY9854629'#
+#round3
+'VBS47764-6366STDY9854373',
+ 'VBS47767-6366STDY9854376',
+ 'VBS47999-6366STDY9854597',
+ 'VBS48013-6366STDY9854611',
+ 'VBS48028-6366STDY9854628',
+ 'VBS48055-6366STDY9854655',
+ 'VBS48131-6366STDY9854733'
+ #round4
+'VBS47764-6366STDY9854373', 'VBS48029-6366STDY9854629',
+#round5
+'VBS47764-6366STDY9854373','VBS48131-6366STDY9854733']
+ 
+[16]
+0 s
+color_mapping_admin2_refs = {
+    'Jarra East': '#8e8c84',
+    'Lower Fuladu West': '#7f7f7f',
+    'Upper Fuladu West': '#6b705c',
+    'Niani': '#4a4e4d',
+    'Niamina East': '#3b5c40',
+    'Jimara': '#8e7d32',
+    'Basse': '#a95b29',
+    'Wuli East': '#b64d3b',
+    'Tumana': '#8a4b39',
+    'Niamina West': '#6f4e37',
+    'Sandu': '#3e3a3a',
+    'Jeshwang': '#a4c9e2',
+    'Kombo Central': '#78aaff',
+    'Lower Niumi': '#4d88ff',
+    'Bakau': '#0077b6',
+    'Illiasa': '#0096c7',
+    'Foni Brefet': '#00b4d8',
+    'Houet': '#ff0072',
+    'Benoue': '#e673af',
+    'Bla': '#c798ef',
+    'Baroueli': '#c798ef'
+}
+ 
+[17]
+pca_df, evr = ag3.pca(
+    region=region,
+    n_snps=n_snps,
+    sample_query=f"sample_set in {WA_sample_sets} and taxon == 'arabiensis'",
+    exclude_samples=outlier_list,
+);
+ 
+ 
+[18]
+3 s
+#round5 outlier removal
+ag3.plot_pca_coords(
+    pca_df,
+    color="admin2_name",
+    labels={"admin2_name": "Location"},
+    color_discrete_map=color_mapping_admin2_refs,
+)
+ 
+ 
+[19]
+0 s
+pca_fig=ag3.plot_pca_coords(
+    pca_df,
+    color="admin2_name",
+    labels={"admin2_name": "Location"},
+    color_discrete_map=color_mapping_admin2_refs,
+    show=False,
+)
+ 
+[20]
+0 s
+from sklearn.cluster import KMeans
+import numpy as np
+import plotly.graph_objects as go
+ 
+[21]
+0 s
+kmeans = KMeans(n_clusters=3, init = 'k-means++', max_iter=200)
+ 
+[28]
+0 s
+df_columns = ['PC1', 'PC2']
+ 
+[29]
+0 s
+# Find assignment by cluster
+data_pred = kmeans.fit_predict(pca_df[df_columns])
+pca_df['cluster'] = data_pred
+ 
+[30]
+0 s
+# Split data by group for generated bounds for ellipse
+data0 = pca_df[pca_df['cluster']==0]
+data1 = pca_df[pca_df['cluster']==1]
+data2 = pca_df[pca_df['cluster']==2]
+ 
+[31]
+0 s
+# Calculate covariance matrix
+cov_matrix = np.cov(data0['PC1'], data0['PC2'])
+# Calculate eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+# Determine the angle from eigenvectors
+angle = np.arctan2(eigenvectors[1, 0], eigenvectors[0, 0])
+# Get center and scale of ellipse
+center = np.mean(np.array([data0['PC1'], data0['PC2']]), axis=1)
+# For a 95% confidence ellipse, the scaling factor for the radii is approx. sqrt(5.991)
+# This factor is derived from the chi-squared distribution with 2 degrees of freedom for 95% confidence [7]
+scaling_factor = np.sqrt(5.991)
+radii = scaling_factor * np.sqrt(eigenvalues)
+
+t = np.linspace(0, 2 * np.pi, 100)
+ellipse_x_auto = center[0] + radii[0] * np.cos(t) * np.cos(angle) - radii[1] * np.sin(t) * np.sin(angle)
+ellipse_y_auto = center[1] + radii[0] * np.cos(t) * np.sin(angle) + radii[1] * np.sin(t) * np.cos(angle)
+ 
+[32]
+0 s
+pca_fig.add_trace(go.Scatter(
+    x=ellipse_x_auto,
+    y=ellipse_y_auto,
+    mode='lines',
+    name='95% Confidence Ellipse',
+    line=dict(color='#b64d3b', width=2)
+    #fill='toself' # Fills the area enclosed by the ellipse
+    ))
+ 
+ 
+[33]
+0 s
+# Calculate covariance matrix
+cov_matrix1 = np.cov(data1['PC1'], data1['PC2'])
+# Calculate eigenvalues and eigenvectors
+eigenvalues1, eigenvectors1 = np.linalg.eig(cov_matrix1)
+# Determine the angle from eigenvectors
+angle1 = np.arctan2(eigenvectors1[1, 0], eigenvectors1[0, 0])
+# Get center and scale of ellipse
+center1 = np.mean(np.array([data1['PC1'], data1['PC2']]), axis=1)
+# For a 95% confidence ellipse, the scaling factor for the radii is approx. sqrt(5.991)
+# This factor is derived from the chi-squared distribution with 2 degrees of freedom for 95% confidence [7]
+scaling_factor1 = np.sqrt(5.991)
+radii1 = scaling_factor1 * np.sqrt(eigenvalues1)
+
+t1 = np.linspace(0, 2 * np.pi, 100)
+ellipse_x_auto1 = center1[0] + radii1[0] * np.cos(t1) * np.cos(angle1) - radii1[1] * np.sin(t1) * np.sin(angle1)
+ellipse_y_auto1 = center1[1] + radii1[0] * np.cos(t1) * np.sin(angle1) + radii1[1] * np.sin(t1) * np.cos(angle1)
+ 
+[34]
+0 s
+pca_fig.add_trace(go.Scatter(
+    x=ellipse_x_auto1,
+    y=ellipse_y_auto1,
+    mode='lines',
+    name='95% Confidence Ellipse',
+    line=dict(color='#ff0072', width=2),
+    #fill='toself' # Fills the area enclosed by the ellipse
+    ))
+ 
+ 
+[35]
+0 s
+# Calculate covariance matrix
+cov_matrix2 = np.cov(data2['PC1'], data2['PC2'])
+# Calculate eigenvalues and eigenvectors
+eigenvalues2, eigenvectors2 = np.linalg.eig(cov_matrix2)
+# Determine the angle from eigenvectors
+angle2 = np.arctan2(eigenvectors2[1, 0], eigenvectors2[0, 0])
+# Get center and scale of ellipse
+center2 = np.mean(np.array([data2['PC1'], data2['PC2']]), axis=1)
+# For a 95% confidence ellipse, the scaling factor for the radii is approx. sqrt(5.991)
+# This factor is derived from the chi-squared distribution with 2 degrees of freedom for 95% confidence [7]
+scaling_factor2 = np.sqrt(5.991)
+radii2 = scaling_factor2 * np.sqrt(eigenvalues2)
+
+t2 = np.linspace(0, 2 * np.pi, 100)
+ellipse_x_auto2 = center2[0] + radii2[0] * np.cos(t2) * np.cos(angle2) - radii2[1] * np.sin(t2) * np.sin(angle2)
+ellipse_y_auto2 = center2[1] + radii2[0] * np.cos(t2) * np.sin(angle2) + radii2[1] * np.sin(t2) * np.cos(angle2)
+ 
+[36]
+0 s
+pca_fig.add_trace(go.Scatter(
+    x=ellipse_x_auto2,
+    y=ellipse_y_auto2,
+    mode='lines',
+    name='95% Confidence Ellipse',
+    line=dict(color='#a4c9e2', width=2),
+    #fill='toself' # Fills the area enclosed by the ellipse
+    ))
+ 
+ 
+[37]
+admin_labels=df_WA__samples.admin2_name.unique()
+ 
+[38]
+0 s
+for trace in pca_fig['data']:
+    if (not trace['name'] in admin_labels):
+        trace['showlegend'] = False
+ 
+[39]
+0 s
+pca_fig
+ 
+ 
+[40]
+df_WA__samples.groupby('country').size()
+ 
+Pairwise Average Fst between coastal and inland cohorts
+
+Compute pairwise average Hudson’s Fst between a set of specified cohorts
+Figure 1c. Fst analysis
+
+ 
+[ ]
+#define some useful variables
+
+#lists of chromosome/arms for analyses
+chrom_arms = ['2R', '2L', '3R','3L','X']
+chroms = ['2RL', '3RL','X']
+
+#dict of  analysis groupings
+admin1_dict = {
+    'Basse' : "admin2_name == 'Basse' | admin2_name == 'Jimara' | admin2_name == 'Sandu' | admin2_name == 'Tumana' | admin2_name == 'Wuli East'",
+    'Brikama' : "admin2_name == 'Foni Brefet' | admin2_name == 'Kombo Central'",
+    'Janjanbureh' : "admin2_name == 'Lower Fuladu West' | admin2_name == 'Niamina East' | admin2_name == 'Niamina West' | admin2_name == 'Upper Fuladu West'",
+    'Kanifing' : "admin2_name == 'Bakau' | admin2_name == 'Jeshwang'",
+    'Kerewan' : "admin2_name ==  'Illiasa' | admin2_name == 'Lower Niumi'",
+    'Kuntaur' : "admin2_name == 'Niani'",
+    'Mansakonko' : "admin2_name == 'Jarra East'"
+}
+
+admin2_dict = {
+    'Basse' : "location == 'Kaba Kamma' | location == 'Sabi' | location == 'Santo Su'",
+    'Jimara' : "location == 'Damba kunda Kuta' | location == 'Gambisara' | location == 'Kossemar' | location == 'Sotuma sere'",
+    'Sandu' : "location == 'Sare Demba'",
+    'Tumana' : "location == 'Nyakoi Madina' | location == 'Sare Alpha' | location == 'Tambansang' | location == 'Tuba Simoto'",
+    'Wuli East' : "location == 'Baja Kunda'",
+    'Foni Brefet' : "location == 'Bullock'",
+    'Kombo Central' : "location == 'Brikama'",
+    'Lower Fuladu West' : "location == 'Boiram' | location == 'Jakhali' | location == 'Kerewan' | location == 'Sankulay kunda' | location == 'Sapu' | location == 'Saruja' | location == 'Wali Kunda'",
+    'Niamina East' : "location== 'Jareng' | location == 'Sare Silli'",
+    'Niamina West' : "location == 'Kumbija'",
+    'Upper Fuladu West' : "location == 'Bansang'",
+    'Bakau' : "location == 'Bakau'",
+    'Jeshwang' : "location == 'Ebotown', location == 'Tallinding'",
+    'Illiasa' : "location ==  'Farafenni'",
+    'Lower Niumi' : "location ==  'Essau'",
+    'Niani' : "location == 'Kuntaur' | location == 'Nyanga Batang'",
+    'Jarra East' : "location == 'Dongoroba'"
+}
+
+#dict of cohorts/locations for labelling
+cohort_dict = {
+    'GM-U_arab_2019' : 'Basse',
+    'GM-W_arab_2019' : 'Brikama',
+    'GM-M_arab_2019' : 'Janjanbureh',
+    'GM-W_arab_2019' : 'Kanifing',
+    'GM-N_arab_2019' : 'Kerewan',
+    'GM-M_arab_2019' : 'Kuntaur',
+    #'GM-L_arab_2001' : 'Mansakonko',
+    'GM-L_arab_2019' : 'Mansakonko'
+}
+
+cohort_dict2 = {
+    'GM-U_arab_2019' : 'Basse',
+    'GM-U_arab_2019' : 'Jimara',
+    'GM-U_arab_2019' : 'Sandu',
+    'GM-U_arab_2019' : 'Tumana',
+    'GM-U_arab_2019' : 'Wuli East',
+    'GM-W_arab_2019' : 'Foni Brefet',
+    'GM-W_arab_2019' : 'Kombo Central',
+    'GM-M_arab_2019' : 'Lower Fuladu West',
+    'GM-M_arab_2019' : 'Niamina East',
+    'GM-M_arab_2019' : 'Niamina West',
+    'GM-M_arab_2019' : 'Upper Fuladu West',
+    'GM-W_arab_2019' : 'Bakau',
+    'GM-W_arab_2019' : 'Jeshwang',
+    'GM-N_arab_2019' : 'Illiasa',
+    'GM-N_arab_2019' : 'Lower Niumi',
+    'GM-M_arab_2019' : 'Niani',
+    'GM-L_arab_2019' : 'Jarra East'
+}
+ 
+[ ]
+fst_arab_df2 = ag3.pairwise_average_fst(
+    region="3L",
+    cohorts="admin2_name",
+    sample_query=(
+        "country == 'Gambia, The' and "
+        "sample_set == '1272-VO-GM-OPONDO-VMF00160' and "
+        "taxon == 'arabiensis' and "
+        "sample_id != 'VBS47740-6366STDY9854349'" #2001 sample
+    ),
+    min_cohort_size=10,
+    site_mask="arab",
+)
+
+fst_arab_df2
+ 
+ 
+[ ]
+ag3.plot_pairwise_average_fst(fst_arab_df2)
+ 
+ 
+[ ]
+#Fst between cohorts of admin1import itertools as itchroms = ['2RL','3RL','X']admin1_locs = ['Basse', 'Brikama', 'Janjanbureh', 'Kanifing', 'Kerewan', 'Kuntaur', 'Mansakonko']fst_df_list = []for region_a,region_b in it.combinations(admin1_locs,2):    for chrom in chroms:        fstar = ag3.fst_gwss(contig = f'{chrom}', min_cohort_size=10, window_size=5000, cohort1_query=admin1_dict[f'{region_a}'], cohort2_query=admin1_dict[f'{region_b}'])        fst_df = pd.DataFrame({'pos':fstar[0], 'fst':fstar[1]})        fst_df['chrom'] = chrom        fst_df['admin1_a'] = region_a        fst_df['admin1_b'] = region_b        fst_df_list.append(fst_df)    fst_bigdf = pd.concat(fst_df_list)#fst_bigdf.to_csv('./Fst-analysis-results/fstdf_admin1.csv')
+
+ 
+[ ]
+#Fst between cohorts of admin2import itertools as itchroms = ['2RL','3RL','X']admin2_locs = ['Basse', 'Jimara', 'Sandu', 'Tumana', 'Wuli East', 'Foni Brefet', 'Kombo Central', 'Lower Fuladu West', 'Niamina East',               'Niamina West', 'Upper Fuladu West', 'Bakau', 'Jeshwang', 'Illiasa', 'Lower Niumi', 'Niani', 'Jarra East']
+
+ 
+[ ]
+Commencez à coder ou à générer avec l'IA.
+
+Produits payants Colab
+-
+Résilier les contrats ici
+country == 'Gambia, The' and sample_id not in {arab_outliers
