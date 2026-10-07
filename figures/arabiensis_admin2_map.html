@@ -1,0 +1,3887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>An. arabiensis sampling, The Gambia</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "f42ee2a2968946be9e5c914fb1fa2028": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "bf7333fd57c74146964fd8036be2bf6c": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "ed847708d5a04d28b46bb0d9caf90858": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": []
+      }
+    },
+    "771d436aea6c4ba8baa23cb9056773cd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "500px",
+        "width": "100%"
+      }
+    },
+    "a5edc96db0894b35a2cfa4edc29f2e8e": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "a5094ad67a5a4cd58c046625fd506705": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          13.5,
+          -15
+        ],
+        "controls": [
+          "IPY_MODEL_0666cea758184d8a8d7c2f6cd038f478",
+          "IPY_MODEL_102d0949bb1f4642be98707b7501d1d2",
+          "IPY_MODEL_bc24824419b0492f9e008faf3948df9d"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_f42ee2a2968946be9e5c914fb1fa2028",
+        "dragging_style": "IPY_MODEL_bf7333fd57c74146964fd8036be2bf6c",
+        "layers": [
+          "IPY_MODEL_ed847708d5a04d28b46bb0d9caf90858",
+          "IPY_MODEL_2bb0c844e16648a89985f794d6dfac3d",
+          "IPY_MODEL_cb1153d1f5124039bfea74e906384791",
+          "IPY_MODEL_fe6576c1a3cb4ef2844cb571518b2bce",
+          "IPY_MODEL_8590ee50db5347848b23a19beeb877aa",
+          "IPY_MODEL_ed4e259a85744fbbad645063ac2e5016",
+          "IPY_MODEL_8d3f969c280a45cc9f3f2f02df700fab",
+          "IPY_MODEL_76fb5edd56274329a525211ed5cc3ab7",
+          "IPY_MODEL_9d238cf0b6fc46dda1069fdf6e907054",
+          "IPY_MODEL_4fb195a3aa3f41ab8f21a1fd26208433",
+          "IPY_MODEL_4636803af2404b8e83b6f9328c376960",
+          "IPY_MODEL_2b519107f55540759101bb32971610f0",
+          "IPY_MODEL_89aa60c23c934239aebc4d3e3d2fca38",
+          "IPY_MODEL_2fbfefda87364308a09f4cb143a896a6",
+          "IPY_MODEL_3a208e5359ca4b0c902825eb05b5f1fe",
+          "IPY_MODEL_ed6f93420d684f3ba5e8ef4f13f88bfa",
+          "IPY_MODEL_d260e34ea8de4d4e88928bd8aaec058b",
+          "IPY_MODEL_598598df1a5c40458458379b6132d49b",
+          "IPY_MODEL_9b531375314d4e6485347814999910f2",
+          "IPY_MODEL_c43e0298f04a43c596fc79eacbea4f43",
+          "IPY_MODEL_789ac4cd4fb7437bac27f0440000a2f6",
+          "IPY_MODEL_b8aedd85c5a54978b770437e05fb4898",
+          "IPY_MODEL_83dec2c50cc243088ade082a01750dcb",
+          "IPY_MODEL_e0bc890214ce4b1695b248a0aa4c996f",
+          "IPY_MODEL_7f29f0d673204594ab64208cbb2cc134",
+          "IPY_MODEL_4735ea678b2043d89a340267a836b755",
+          "IPY_MODEL_c888d02dd6f2424aa9ed5fd914e3ea00",
+          "IPY_MODEL_ea31a459c40d44c3ad258d8b1d9f0e14",
+          "IPY_MODEL_25fdcf595d77430d92eb5c0fd818f64b",
+          "IPY_MODEL_993e2ec4f540441199578886cdf4e4d5",
+          "IPY_MODEL_0b661559c9de434b88be4e535eb37b92"
+        ],
+        "layout": "IPY_MODEL_771d436aea6c4ba8baa23cb9056773cd",
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "style": "IPY_MODEL_a5edc96db0894b35a2cfa4edc29f2e8e",
+        "zoom": 9.0
+      }
+    },
+    "0666cea758184d8a8d7c2f6cd038f478": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "102d0949bb1f4642be98707b7501d1d2": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "bc24824419b0492f9e008faf3948df9d": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "2bb0c844e16648a89985f794d6dfac3d": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.38,
+          -15.294
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Dongoroba (13.380, -15.294)\nAdmin level 2: Jarra East\nAdmin level 1: Mansakonko (GM-L)\nCountry: Gambia, The\nYears: 2001, 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "cb1153d1f5124039bfea74e906384791": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.503,
+          -14.926
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Boiram (13.503, -14.926)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "fe6576c1a3cb4ef2844cb571518b2bce": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.546,
+          -14.972
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jakhali (13.546, -14.972)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "8590ee50db5347848b23a19beeb877aa": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.515,
+          -14.896
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kerewan (13.515, -14.896)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "ed4e259a85744fbbad645063ac2e5016": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.514,
+          -14.762
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sankulay kunda (13.514, -14.762)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "8d3f969c280a45cc9f3f2f02df700fab": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.559,
+          -14.945
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sapu (13.559, -14.945)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "76fb5edd56274329a525211ed5cc3ab7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.551,
+          -14.913
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Saruja (13.551, -14.913)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "9d238cf0b6fc46dda1069fdf6e907054": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.62,
+          -15.19
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jareng (13.620, -15.190)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "4fb195a3aa3f41ab8f21a1fd26208433": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.619,
+          -15.124
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Silli (13.619, -15.124)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "4636803af2404b8e83b6f9328c376960": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.606,
+          -15.233
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kumbija (13.606, -15.233)\nAdmin level 2: Niamina West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "2b519107f55540759101bb32971610f0": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.434,
+          -14.655
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bansang (13.434, -14.655)\nAdmin level 2: Upper Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "89aa60c23c934239aebc4d3e3d2fca38": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.668,
+          -14.889
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kuntaur (13.668, -14.889)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "2fbfefda87364308a09f4cb143a896a6": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.785,
+          -15.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyanga Batang (13.785, -15.010)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "3a208e5359ca4b0c902825eb05b5f1fe": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.572,
+          -15.599
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Farafenni (13.572, -15.599)\nAdmin level 2: Illiasa\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "ed6f93420d684f3ba5e8ef4f13f88bfa": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.481,
+          -16.515
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Essau (13.481, -16.515)\nAdmin level 2: Lower Niumi\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "d260e34ea8de4d4e88928bd8aaec058b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.305,
+          -14.207
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kaba Kamma (13.305, -14.207)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "598598df1a5c40458458379b6132d49b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.237,
+          -14.196
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sabi (13.237, -14.196)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "9b531375314d4e6485347814999910f2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.307,
+          -14.22
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Santo Su (13.307, -14.220)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 10 arabiensis; "
+      }
+    },
+    "c43e0298f04a43c596fc79eacbea4f43": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.26,
+          -14.268
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Damba kunda Kuta (13.260, -14.268)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "789ac4cd4fb7437bac27f0440000a2f6": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.236,
+          -14.31
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Gambisara (13.236, -14.310)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "b8aedd85c5a54978b770437e05fb4898": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.331,
+          -14.376
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kossemar (13.331, -14.376)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 11 arabiensis; "
+      }
+    },
+    "83dec2c50cc243088ade082a01750dcb": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.294,
+          -14.32
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sotuma sere (13.294, -14.320)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "e0bc890214ce4b1695b248a0aa4c996f": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.433,
+          -14.317
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Demba (13.433, -14.317)\nAdmin level 2: Sandu\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "7f29f0d673204594ab64208cbb2cc134": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.308,
+          -14.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyakoi Madina (13.308, -14.010)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "4735ea678b2043d89a340267a836b755": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.376,
+          -14.157
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tambansang (13.376, -14.157)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "c888d02dd6f2424aa9ed5fd914e3ea00": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.368,
+          -13.988
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tuba Simoto (13.368, -13.988)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "ea31a459c40d44c3ad258d8b1d9f0e14": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.29,
+          -16.657
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Brikama-A (13.290, -16.657)\nAdmin level 2: Kombo Central\nAdmin level 1: Brikama (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 28 arabiensis; "
+      }
+    },
+    "25fdcf595d77430d92eb5c0fd818f64b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.476,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bakau (13.476, -16.674)\nAdmin level 2: Bakau\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "993e2ec4f540441199578886cdf4e4d5": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.438,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Ebotown (13.438, -16.674)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 19 arabiensis; "
+      }
+    },
+    "0b661559c9de434b88be4e535eb37b92": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.437,
+          -16.67
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tallinding (13.437, -16.670)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 58 arabiensis; "
+      }
+    },
+    "2d15eab7a6004254a8ff3cba9ba96c4d": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "ad568f45bc63412ba43e165aa2fd2d03": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "1c3dc12c440d47409cc01537f5dad8ab": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": []
+      }
+    },
+    "b21fc1291c7148f6a37de86bdaa5940b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "500px",
+        "width": "100%"
+      }
+    },
+    "e16fb1f0035044b29e33b1eb7b501af7": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "e76cfbdd85f043a6876f08d1136d2340": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          13.5,
+          -15
+        ],
+        "controls": [
+          "IPY_MODEL_2bc8ad6902f843098c9f6caf887ce4e2",
+          "IPY_MODEL_ff9ece22db5d408d8721c2928dcc35ac",
+          "IPY_MODEL_e11433587abe4afcba404f6493f68c1d"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_2d15eab7a6004254a8ff3cba9ba96c4d",
+        "dragging_style": "IPY_MODEL_ad568f45bc63412ba43e165aa2fd2d03",
+        "layers": [
+          "IPY_MODEL_1c3dc12c440d47409cc01537f5dad8ab",
+          "IPY_MODEL_027960471d0a41ac8d72a85d754150a5",
+          "IPY_MODEL_db901fa7afe749ae9cdf6ba92634d49e",
+          "IPY_MODEL_53b1534ca65a42e99b76c60f005d994d",
+          "IPY_MODEL_7ce9bd7bd1ca4ac5b6aa41b67beb1961",
+          "IPY_MODEL_6457715f1d584a83967e88657e7f8b35",
+          "IPY_MODEL_de1a2bf82c004f98a96151b522b0a1bb",
+          "IPY_MODEL_62eaeec1e38d47879c9b823272f21542",
+          "IPY_MODEL_d628f5bad5af4b57a51834a00c19f372",
+          "IPY_MODEL_b6666ae346804ef9b6865745677ed27b",
+          "IPY_MODEL_8aab9ed769c14b18b7340498a7bb0d64",
+          "IPY_MODEL_715563863cb44725becb3c24d3dea761",
+          "IPY_MODEL_b399d85e697c4d1eb56246fb44affb4b",
+          "IPY_MODEL_0bdf8380fd5247deb76f7bfa03348ad2",
+          "IPY_MODEL_8b47e52a0766489896a6b5b826baed15",
+          "IPY_MODEL_311381d03cb04376a92d273fca862e01",
+          "IPY_MODEL_4e3fa72ff35e41229349ea897b0d8609",
+          "IPY_MODEL_c33cbb4e7ea147fabca92c4903a9fa89",
+          "IPY_MODEL_4a1f91365ad74648a4c89475880cb9f9",
+          "IPY_MODEL_5123fc2c70e649eca93e79393954f2c0",
+          "IPY_MODEL_152d1ebaceab4c608f42057a7054ea55",
+          "IPY_MODEL_073ff1b17ddd4e8aac3285a469648b22",
+          "IPY_MODEL_9e16662c17f744008d5237b626cbee47",
+          "IPY_MODEL_32e270d8d06244c5b883a5a0c056d156",
+          "IPY_MODEL_f649499e596f421687be9c0e8aa80afc",
+          "IPY_MODEL_ede47fd910d74738ada1e3143ed9f930",
+          "IPY_MODEL_3a2d2888569a47c0a9e7ef74fabbcd28",
+          "IPY_MODEL_6e80de6f38984f88b0cbc4b990c5503a",
+          "IPY_MODEL_d86743fc2a3941e3a90980d146496d2e",
+          "IPY_MODEL_f66263a28f0b49bd979f39b3ee77d002",
+          "IPY_MODEL_8eb492016ba842ef9fdfef88c5449aa4"
+        ],
+        "layout": "IPY_MODEL_b21fc1291c7148f6a37de86bdaa5940b",
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "style": "IPY_MODEL_e16fb1f0035044b29e33b1eb7b501af7",
+        "zoom": 9.0
+      }
+    },
+    "2bc8ad6902f843098c9f6caf887ce4e2": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "ff9ece22db5d408d8721c2928dcc35ac": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "e11433587abe4afcba404f6493f68c1d": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "027960471d0a41ac8d72a85d754150a5": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.38,
+          -15.294
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Dongoroba (13.380, -15.294)\nAdmin level 2: Jarra East\nAdmin level 1: Mansakonko (GM-L)\nCountry: Gambia, The\nYears: 2001, 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "db901fa7afe749ae9cdf6ba92634d49e": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.503,
+          -14.926
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Boiram (13.503, -14.926)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "53b1534ca65a42e99b76c60f005d994d": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.546,
+          -14.972
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jakhali (13.546, -14.972)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "7ce9bd7bd1ca4ac5b6aa41b67beb1961": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.515,
+          -14.896
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kerewan (13.515, -14.896)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "6457715f1d584a83967e88657e7f8b35": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.514,
+          -14.762
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sankulay kunda (13.514, -14.762)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "de1a2bf82c004f98a96151b522b0a1bb": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.559,
+          -14.945
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sapu (13.559, -14.945)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "62eaeec1e38d47879c9b823272f21542": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.551,
+          -14.913
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Saruja (13.551, -14.913)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "d628f5bad5af4b57a51834a00c19f372": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.62,
+          -15.19
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jareng (13.620, -15.190)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "b6666ae346804ef9b6865745677ed27b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.619,
+          -15.124
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Silli (13.619, -15.124)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "8aab9ed769c14b18b7340498a7bb0d64": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.606,
+          -15.233
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kumbija (13.606, -15.233)\nAdmin level 2: Niamina West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "715563863cb44725becb3c24d3dea761": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.434,
+          -14.655
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bansang (13.434, -14.655)\nAdmin level 2: Upper Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "b399d85e697c4d1eb56246fb44affb4b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.668,
+          -14.889
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kuntaur (13.668, -14.889)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "0bdf8380fd5247deb76f7bfa03348ad2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.785,
+          -15.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyanga Batang (13.785, -15.010)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "8b47e52a0766489896a6b5b826baed15": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.572,
+          -15.599
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Farafenni (13.572, -15.599)\nAdmin level 2: Illiasa\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "311381d03cb04376a92d273fca862e01": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.481,
+          -16.515
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Essau (13.481, -16.515)\nAdmin level 2: Lower Niumi\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "4e3fa72ff35e41229349ea897b0d8609": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.305,
+          -14.207
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kaba Kamma (13.305, -14.207)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "c33cbb4e7ea147fabca92c4903a9fa89": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.237,
+          -14.196
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sabi (13.237, -14.196)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "4a1f91365ad74648a4c89475880cb9f9": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.307,
+          -14.22
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Santo Su (13.307, -14.220)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 10 arabiensis; "
+      }
+    },
+    "5123fc2c70e649eca93e79393954f2c0": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.26,
+          -14.268
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Damba kunda Kuta (13.260, -14.268)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "152d1ebaceab4c608f42057a7054ea55": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.236,
+          -14.31
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Gambisara (13.236, -14.310)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "073ff1b17ddd4e8aac3285a469648b22": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.331,
+          -14.376
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kossemar (13.331, -14.376)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 11 arabiensis; "
+      }
+    },
+    "9e16662c17f744008d5237b626cbee47": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.294,
+          -14.32
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sotuma sere (13.294, -14.320)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "32e270d8d06244c5b883a5a0c056d156": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.433,
+          -14.317
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Demba (13.433, -14.317)\nAdmin level 2: Sandu\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "f649499e596f421687be9c0e8aa80afc": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.308,
+          -14.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyakoi Madina (13.308, -14.010)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "ede47fd910d74738ada1e3143ed9f930": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.376,
+          -14.157
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tambansang (13.376, -14.157)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "3a2d2888569a47c0a9e7ef74fabbcd28": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.368,
+          -13.988
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tuba Simoto (13.368, -13.988)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "6e80de6f38984f88b0cbc4b990c5503a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.29,
+          -16.657
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Brikama-A (13.290, -16.657)\nAdmin level 2: Kombo Central\nAdmin level 1: Brikama (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 28 arabiensis; "
+      }
+    },
+    "d86743fc2a3941e3a90980d146496d2e": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.476,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bakau (13.476, -16.674)\nAdmin level 2: Bakau\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "f66263a28f0b49bd979f39b3ee77d002": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.438,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Ebotown (13.438, -16.674)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 19 arabiensis; "
+      }
+    },
+    "8eb492016ba842ef9fdfef88c5449aa4": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.437,
+          -16.67
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tallinding (13.437, -16.670)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 58 arabiensis; "
+      }
+    },
+    "7bf1cf3b7138498f893ed3fd83f8d8a3": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "0e87d05594064b70a8cb4f478912af54": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "a391b44cc64c44c680f17acd2f279c99": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": []
+      }
+    },
+    "b900bed0e61846e5be441b57c53c73c5": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "500px",
+        "width": "100%"
+      }
+    },
+    "9ef336831e3042c9b7e89a0d1e38b394": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "e7c6bd032bf74687be598e7f8c5eaccc": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          13.5,
+          -15
+        ],
+        "controls": [
+          "IPY_MODEL_1b65ec26e22645d78c745f4ac293a2ba",
+          "IPY_MODEL_d8cf60a46e9441e598d4f619c0e9e437",
+          "IPY_MODEL_15748295506d4057aaef5e8a5956578b"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_7bf1cf3b7138498f893ed3fd83f8d8a3",
+        "dragging_style": "IPY_MODEL_0e87d05594064b70a8cb4f478912af54",
+        "layers": [
+          "IPY_MODEL_a391b44cc64c44c680f17acd2f279c99",
+          "IPY_MODEL_243074a0e4b441a089b124eff820e566",
+          "IPY_MODEL_6d6d9b1e75914c95bdbcb73840b2fbf7",
+          "IPY_MODEL_a9019bb5897b42f9b33cbf516d2a6b08",
+          "IPY_MODEL_300445b8e09e42cdba2afedceda15a7d",
+          "IPY_MODEL_b4401d8aa366456dba578f96175cccc9",
+          "IPY_MODEL_aa757051ea9845a1be1e9b767393755d",
+          "IPY_MODEL_794ec6b982094385ac0c5931dae79404",
+          "IPY_MODEL_4f6d577b6c2b493c9c97d4d4f4975914",
+          "IPY_MODEL_aff15719113a4217a9e7d98f6c1d1db8",
+          "IPY_MODEL_5c08c3eebd2c4d008fc21bcbbfd3a666",
+          "IPY_MODEL_af6a566986b64c16b652bff37fd59df7",
+          "IPY_MODEL_707e52c92c79494ab7a6609b69bce96a",
+          "IPY_MODEL_bdacac892e9145a6b9ed316b936fa5d2",
+          "IPY_MODEL_e56dff6ec0c1452db785b65b218a8ca4",
+          "IPY_MODEL_f8d404a491194746adfd7cdc6b3e803a",
+          "IPY_MODEL_46a3579776a941dea11d80338f1c9981",
+          "IPY_MODEL_7491ec9f52e54218a0be8e5130d99cea",
+          "IPY_MODEL_38a244d31854467c8806dfcb39167b62",
+          "IPY_MODEL_d1d7b4f44ade44918f850d5b0c005689",
+          "IPY_MODEL_a16757ea2d7244b78208e06dbc4d4588",
+          "IPY_MODEL_f235db8b1b004142abb3baaff8ea618f",
+          "IPY_MODEL_a6349954f5324746a8e5d0814de5c225",
+          "IPY_MODEL_5f93f94548ab4cd6999c641cb732a14f",
+          "IPY_MODEL_329e98872434493c80565abfc1f50383",
+          "IPY_MODEL_44adbe4619144fc3aa7f314d7aac4f5a",
+          "IPY_MODEL_04239485858549eab12637eafe7fb817",
+          "IPY_MODEL_ca143f436bcf4ef99b6eacfc149e838d",
+          "IPY_MODEL_0be7ba2c19944dbfa11a642f322f4dda",
+          "IPY_MODEL_de98efe104f9456b8c4c91295710848a",
+          "IPY_MODEL_113a5a72fb834b9a9d58c0ffc941c1d5"
+        ],
+        "layout": "IPY_MODEL_b900bed0e61846e5be441b57c53c73c5",
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "style": "IPY_MODEL_9ef336831e3042c9b7e89a0d1e38b394",
+        "zoom": 9.0
+      }
+    },
+    "1b65ec26e22645d78c745f4ac293a2ba": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "d8cf60a46e9441e598d4f619c0e9e437": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "15748295506d4057aaef5e8a5956578b": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "243074a0e4b441a089b124eff820e566": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.38,
+          -15.294
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Dongoroba (13.380, -15.294)\nAdmin level 2: Jarra East\nAdmin level 1: Mansakonko (GM-L)\nCountry: Gambia, The\nYears: 2001, 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "6d6d9b1e75914c95bdbcb73840b2fbf7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.503,
+          -14.926
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Boiram (13.503, -14.926)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "a9019bb5897b42f9b33cbf516d2a6b08": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.546,
+          -14.972
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jakhali (13.546, -14.972)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "300445b8e09e42cdba2afedceda15a7d": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.515,
+          -14.896
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kerewan (13.515, -14.896)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "b4401d8aa366456dba578f96175cccc9": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.514,
+          -14.762
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sankulay kunda (13.514, -14.762)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "aa757051ea9845a1be1e9b767393755d": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.559,
+          -14.945
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sapu (13.559, -14.945)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "794ec6b982094385ac0c5931dae79404": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.551,
+          -14.913
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Saruja (13.551, -14.913)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "4f6d577b6c2b493c9c97d4d4f4975914": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.62,
+          -15.19
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jareng (13.620, -15.190)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "aff15719113a4217a9e7d98f6c1d1db8": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.619,
+          -15.124
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Silli (13.619, -15.124)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "5c08c3eebd2c4d008fc21bcbbfd3a666": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.606,
+          -15.233
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kumbija (13.606, -15.233)\nAdmin level 2: Niamina West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "af6a566986b64c16b652bff37fd59df7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.434,
+          -14.655
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bansang (13.434, -14.655)\nAdmin level 2: Upper Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "707e52c92c79494ab7a6609b69bce96a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.668,
+          -14.889
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kuntaur (13.668, -14.889)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "bdacac892e9145a6b9ed316b936fa5d2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.785,
+          -15.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyanga Batang (13.785, -15.010)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "e56dff6ec0c1452db785b65b218a8ca4": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.572,
+          -15.599
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Farafenni (13.572, -15.599)\nAdmin level 2: Illiasa\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "f8d404a491194746adfd7cdc6b3e803a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.481,
+          -16.515
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Essau (13.481, -16.515)\nAdmin level 2: Lower Niumi\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "46a3579776a941dea11d80338f1c9981": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.305,
+          -14.207
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kaba Kamma (13.305, -14.207)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "7491ec9f52e54218a0be8e5130d99cea": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.237,
+          -14.196
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sabi (13.237, -14.196)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "38a244d31854467c8806dfcb39167b62": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.307,
+          -14.22
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Santo Su (13.307, -14.220)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 10 arabiensis; "
+      }
+    },
+    "d1d7b4f44ade44918f850d5b0c005689": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.26,
+          -14.268
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Damba kunda Kuta (13.260, -14.268)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "a16757ea2d7244b78208e06dbc4d4588": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.236,
+          -14.31
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Gambisara (13.236, -14.310)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "f235db8b1b004142abb3baaff8ea618f": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.331,
+          -14.376
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kossemar (13.331, -14.376)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 11 arabiensis; "
+      }
+    },
+    "a6349954f5324746a8e5d0814de5c225": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.294,
+          -14.32
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sotuma sere (13.294, -14.320)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "5f93f94548ab4cd6999c641cb732a14f": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.433,
+          -14.317
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Demba (13.433, -14.317)\nAdmin level 2: Sandu\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "329e98872434493c80565abfc1f50383": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.308,
+          -14.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyakoi Madina (13.308, -14.010)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "44adbe4619144fc3aa7f314d7aac4f5a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.376,
+          -14.157
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tambansang (13.376, -14.157)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "04239485858549eab12637eafe7fb817": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.368,
+          -13.988
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tuba Simoto (13.368, -13.988)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "ca143f436bcf4ef99b6eacfc149e838d": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.29,
+          -16.657
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Brikama-A (13.290, -16.657)\nAdmin level 2: Kombo Central\nAdmin level 1: Brikama (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 28 arabiensis; "
+      }
+    },
+    "0be7ba2c19944dbfa11a642f322f4dda": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.476,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bakau (13.476, -16.674)\nAdmin level 2: Bakau\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "de98efe104f9456b8c4c91295710848a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.438,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Ebotown (13.438, -16.674)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 19 arabiensis; "
+      }
+    },
+    "113a5a72fb834b9a9d58c0ffc941c1d5": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.437,
+          -16.67
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tallinding (13.437, -16.670)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 58 arabiensis; "
+      }
+    },
+    "fee8d9f019704ecdbdcd848c80611f66": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "2fc08eec34ea41c29df8ba9f1f883b16": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "9267252da90944b2a54b2977dad369b7": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 19,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": []
+      }
+    },
+    "57f0129930a44dcbab44c6381e864c8b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "500px",
+        "width": "100%"
+      }
+    },
+    "80db2a9c4eab44ce98ac72061194eb33": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "9183eabb8735403ab8e8fb4df76c2ff8": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          13.5,
+          -15
+        ],
+        "controls": [
+          "IPY_MODEL_8d693a0f8e4040e7b54a9bb281a69a97",
+          "IPY_MODEL_03d84c048d054984a937f3968df75ec6",
+          "IPY_MODEL_6b56735e781044e09e25edef4a72978b"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_fee8d9f019704ecdbdcd848c80611f66",
+        "dragging_style": "IPY_MODEL_2fc08eec34ea41c29df8ba9f1f883b16",
+        "layers": [
+          "IPY_MODEL_9267252da90944b2a54b2977dad369b7",
+          "IPY_MODEL_5f274be55929428e939ea65a532c744a",
+          "IPY_MODEL_4b667a3c79c94d25adf5da2f27db8ee6",
+          "IPY_MODEL_b1d1e3ff1d5c418aa92656477c3a2ca5",
+          "IPY_MODEL_ad40a25466d5401d860b4d5fbdefa778",
+          "IPY_MODEL_b70190c6d55944e9818e87c3d9319ec2",
+          "IPY_MODEL_a8ebe627061243ac94ec3aef32ab167b",
+          "IPY_MODEL_d53c0eee21fc4beab89b6faca4e65656",
+          "IPY_MODEL_3138e2c762f341fd9744c44909b2efa7",
+          "IPY_MODEL_99e37d9248e24ac28382bcddb62300d5",
+          "IPY_MODEL_55c927eb29b04dfe91276cf40274ffa2",
+          "IPY_MODEL_e4efd63a2d764d3189530aa1946f3265",
+          "IPY_MODEL_77975ed8f7744d70b569ffc2e80a10f7",
+          "IPY_MODEL_0f9427234d194506a358c6ca47abc706",
+          "IPY_MODEL_cfd85e6e59ce4d3284479f81862748d7",
+          "IPY_MODEL_5ff805d2e7e64494b32f2e58b780c824",
+          "IPY_MODEL_5d784dfa1ea24047b28c80f7255275ef",
+          "IPY_MODEL_d1e24bcf0f7b4e52a62fb8f72b5c3642",
+          "IPY_MODEL_55c6a225426344c5a1ad736a34f0f951",
+          "IPY_MODEL_d07d486580c44aa584f40a76b71b6521",
+          "IPY_MODEL_550eb726e30345ea961e434dbc7e389a",
+          "IPY_MODEL_51882f06bf244418a7d114a7309b5c15",
+          "IPY_MODEL_dae7024bc8bd4811a000ee69cce295d6",
+          "IPY_MODEL_9c0d4991c61b485aa3d921ff15bb83c2",
+          "IPY_MODEL_e21823b7a2e44112b4b01238e1fd38ac",
+          "IPY_MODEL_dba7328d147446d383aa2f09037af226",
+          "IPY_MODEL_0cd3770b33fa4479be4d1f7be3907d15",
+          "IPY_MODEL_4bea069fa3b04e4f81273f6b626cc6a8",
+          "IPY_MODEL_9962a7bd817c484cad34bc6fa533a5d8",
+          "IPY_MODEL_1dbfe70a1e204d9e974a96f8b81fe16a",
+          "IPY_MODEL_a6d5234f21734a5392174314bf680e55"
+        ],
+        "layout": "IPY_MODEL_57f0129930a44dcbab44c6381e864c8b",
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "style": "IPY_MODEL_80db2a9c4eab44ce98ac72061194eb33",
+        "zoom": 9.0
+      }
+    },
+    "8d693a0f8e4040e7b54a9bb281a69a97": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "03d84c048d054984a937f3968df75ec6": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "6b56735e781044e09e25edef4a72978b": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "5f274be55929428e939ea65a532c744a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.38,
+          -15.294
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Dongoroba (13.380, -15.294)\nAdmin level 2: Jarra East\nAdmin level 1: Mansakonko (GM-L)\nCountry: Gambia, The\nYears: 2001, 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "4b667a3c79c94d25adf5da2f27db8ee6": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.503,
+          -14.926
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Boiram (13.503, -14.926)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "b1d1e3ff1d5c418aa92656477c3a2ca5": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.546,
+          -14.972
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jakhali (13.546, -14.972)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "ad40a25466d5401d860b4d5fbdefa778": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.515,
+          -14.896
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kerewan (13.515, -14.896)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "b70190c6d55944e9818e87c3d9319ec2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.514,
+          -14.762
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sankulay kunda (13.514, -14.762)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "a8ebe627061243ac94ec3aef32ab167b": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.559,
+          -14.945
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sapu (13.559, -14.945)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "d53c0eee21fc4beab89b6faca4e65656": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.551,
+          -14.913
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Saruja (13.551, -14.913)\nAdmin level 2: Lower Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "3138e2c762f341fd9744c44909b2efa7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.62,
+          -15.19
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Jareng (13.620, -15.190)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "99e37d9248e24ac28382bcddb62300d5": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.619,
+          -15.124
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Silli (13.619, -15.124)\nAdmin level 2: Niamina East\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "55c927eb29b04dfe91276cf40274ffa2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.606,
+          -15.233
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kumbija (13.606, -15.233)\nAdmin level 2: Niamina West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "e4efd63a2d764d3189530aa1946f3265": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.434,
+          -14.655
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bansang (13.434, -14.655)\nAdmin level 2: Upper Fuladu West\nAdmin level 1: Janjanbureh (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 12 arabiensis; "
+      }
+    },
+    "77975ed8f7744d70b569ffc2e80a10f7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.668,
+          -14.889
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kuntaur (13.668, -14.889)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "0f9427234d194506a358c6ca47abc706": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.785,
+          -15.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyanga Batang (13.785, -15.010)\nAdmin level 2: Niani\nAdmin level 1: Kuntaur (GM-M)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 2 arabiensis; "
+      }
+    },
+    "cfd85e6e59ce4d3284479f81862748d7": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.572,
+          -15.599
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Farafenni (13.572, -15.599)\nAdmin level 2: Illiasa\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "5ff805d2e7e64494b32f2e58b780c824": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.481,
+          -16.515
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Essau (13.481, -16.515)\nAdmin level 2: Lower Niumi\nAdmin level 1: Kerewan (GM-N)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 13 arabiensis; "
+      }
+    },
+    "5d784dfa1ea24047b28c80f7255275ef": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.305,
+          -14.207
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kaba Kamma (13.305, -14.207)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 3 arabiensis; "
+      }
+    },
+    "d1e24bcf0f7b4e52a62fb8f72b5c3642": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.237,
+          -14.196
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sabi (13.237, -14.196)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "55c6a225426344c5a1ad736a34f0f951": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.307,
+          -14.22
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Santo Su (13.307, -14.220)\nAdmin level 2: Basse\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 10 arabiensis; "
+      }
+    },
+    "d07d486580c44aa584f40a76b71b6521": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.26,
+          -14.268
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Damba kunda Kuta (13.260, -14.268)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "550eb726e30345ea961e434dbc7e389a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.236,
+          -14.31
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Gambisara (13.236, -14.310)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 15 arabiensis; "
+      }
+    },
+    "51882f06bf244418a7d114a7309b5c15": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.331,
+          -14.376
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Kossemar (13.331, -14.376)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 11 arabiensis; "
+      }
+    },
+    "dae7024bc8bd4811a000ee69cce295d6": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.294,
+          -14.32
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sotuma sere (13.294, -14.320)\nAdmin level 2: Jimara\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "9c0d4991c61b485aa3d921ff15bb83c2": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.433,
+          -14.317
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Sare Demba (13.433, -14.317)\nAdmin level 2: Sandu\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "e21823b7a2e44112b4b01238e1fd38ac": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.308,
+          -14.01
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Nyakoi Madina (13.308, -14.010)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 5 arabiensis; "
+      }
+    },
+    "dba7328d147446d383aa2f09037af226": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.376,
+          -14.157
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tambansang (13.376, -14.157)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 7 arabiensis; "
+      }
+    },
+    "0cd3770b33fa4479be4d1f7be3907d15": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.368,
+          -13.988
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tuba Simoto (13.368, -13.988)\nAdmin level 2: Tumana\nAdmin level 1: Basse (GM-U)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 8 arabiensis; "
+      }
+    },
+    "4bea069fa3b04e4f81273f6b626cc6a8": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.29,
+          -16.657
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Brikama-A (13.290, -16.657)\nAdmin level 2: Kombo Central\nAdmin level 1: Brikama (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 28 arabiensis; "
+      }
+    },
+    "9962a7bd817c484cad34bc6fa533a5d8": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.476,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Bakau (13.476, -16.674)\nAdmin level 2: Bakau\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 6 arabiensis; "
+      }
+    },
+    "1dbfe70a1e204d9e974a96f8b81fe16a": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.438,
+          -16.674
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Ebotown (13.438, -16.674)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 19 arabiensis; "
+      }
+    },
+    "a6d5234f21734a5392174314bf680e55": {
+      "model_name": "LeafletMarkerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "draggable": false,
+        "location": [
+          13.437,
+          -16.67
+        ],
+        "options": [
+          "alt",
+          "draggable",
+          "keyboard",
+          "pm_ignore",
+          "rise_offset",
+          "rise_on_hover",
+          "rotation_angle",
+          "rotation_origin",
+          "title",
+          "z_index_offset"
+        ],
+        "subitems": [],
+        "title": "Location: Tallinding (13.437, -16.670)\nAdmin level 2: Jeshwang\nAdmin level 1: Kanifing (GM-W)\nCountry: Gambia, The\nYears: 2019\nSample sets: 1272-VO-GM-OPONDO-VMF00160\nContributors: Kevin Opondo\nNo. specimens: 58 arabiensis; "
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "9183eabb8735403ab8e8fb4df76c2ff8"}
+</script>
+
+</body>
+</html>
