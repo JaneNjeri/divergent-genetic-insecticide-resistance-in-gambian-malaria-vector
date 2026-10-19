@@ -1,4 +1,4 @@
-# Integrated population genomics and phenotypic analyses reveal geographic structure and novel selection signals underlying insecticide resistance in *Anopheles arabiensis* from The Gambia, West Africa
+# Integrated population genomics and phenotypic analyses reveal geographic structure and signatures of recent positive selection underlying insecticide resistance in *Anopheles arabiensis* from The Gambia, West Africa
 
 Welcome to the GitHub repository accompanying our manuscript:
 
