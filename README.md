@@ -37,7 +37,7 @@ ___
 
 If you use any of the data or code from this repository, please cite:
 
-[manuscript citation once published]
+<https://doi.org/10.1093/gbe/evag277>
 
 ___
 
